@@ -35,8 +35,8 @@ This tool allows you to search for places/businesses on Google Maps and scrape k
 
 ### 1️⃣ Clone the Repository
 ```bash
-git clone https://github.com/your-username/google-maps-scraper.git
-cd google-maps-scraper
+git clone https://github.com/piyush0s/web-scrapper.git
+cd web-scrapper
 ```
 
 ### 2️⃣ Create Virtual Environment (Optional but Recommended)
@@ -73,7 +73,7 @@ http://127.0.0.1:5000
 
 ## 📂 Project Structure
 ```
-google-maps-scraper/
+web-scrapper/
 │
 ├── static/                # CSS, JS, and frontend assets
 ├── templates/             # HTML templates

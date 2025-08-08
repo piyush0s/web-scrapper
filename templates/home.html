@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Maps Lead Scraper</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🗺️ Google Maps Lead Scraper</h1>
+            <p>Extract business leads from Google Maps with ease</p>
+        </div>
+
+        <div class="main-content">
+            <div class="form-section">
+                <div class="alert alert-info">
+                    <strong>📋 Instructions:</strong> Enter your search criteria to start scraping leads from Google Maps.
+                </div>
+
+                <form id="scrapeForm">
+                    <div class="form-group">
+                        <label for="query">🔍 Search Query</label>
+                        <input type="text" id="query" class="form-control" placeholder="e.g., restaurants, dentists, auto repair" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="location">📍 Location</label>
+                        <input type="text" id="location" class="form-control" placeholder="e.g., New York, NY" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="maxResults">📊 Maximum Results</label>
+                        <input type="number" id="maxResults" class="form-control" min="1" max="200" value="20">
+                    </div>
+
+                    <button type="submit" class="btn" id="scrapeBtn">
+                        🚀 Start Scraping
+                    </button>
+                </form>
+
+                <div class="loading" id="loading">
+                    <div class="spinner"></div>
+                    <span>Scraping leads... Please wait</span>
+                </div>
+
+                <div class="export-section" id="exportSection" style="display: none;">
+                    <button class="btn btn-export" id="exportBtn">
+                        📥 Export to CSV
+                    </button>
+                    <div class="alert alert-warning">
+                        <strong>⚠️ Note:</strong> For production use, implement proper rate limiting.
+                    </div>
+                </div>
+            </div>
+
+            <div class="results-section">
+                <div class="stats" id="stats" style="display: none;">
+                    <div class="stat-card">
+                        <span class="stat-number" id="totalLeads">0</span>
+                        <span class="stat-label">Total Leads</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number" id="withPhone">0</span>
+                        <span class="stat-label">With Phone</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number" id="withWebsite">0</span>
+                        <span class="stat-label">With Website</span>
+                    </div>
+                </div>
+
+                <div class="results-container">
+                    <div class="results-header">
+                        📋 Scraped Leads
+                    </div>
+                    <div id="resultsContent">
+                        <div style="padding: 40px; text-align: center; color: #a0aec0;">
+                            <div style="font-size: 3rem; margin-bottom: 15px;">🎯</div>
+                            <p>Your scraped leads will appear here</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>

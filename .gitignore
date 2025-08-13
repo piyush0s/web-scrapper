@@ -1,2 +1,5 @@
 /webenv
 .env
+__pycache__
+
+

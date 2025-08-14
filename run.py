@@ -1,6 +1,5 @@
 from flask import Flask, render_template, request, jsonify
 from logic import GoogleMapsLeadScraper
-import os
 from dotenv import load_dotenv
 from concurrent.futures import ThreadPoolExecutor
 import logging
